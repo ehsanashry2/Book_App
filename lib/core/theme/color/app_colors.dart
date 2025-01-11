@@ -6,7 +6,7 @@ class AppColors {
   static const Color percentage = Color(0xFF7CDBC3);
   static const Color textsecondary = Color(0xFF999057);
   static const Color white = Color(0xFFFFFFFF);
-  static const Color black = Color(0xFF000000);
+  static const Color textsecondary2 = Color(0xFF474329);
   static const Color transparent = Color(0x00000000);
   static const Color grey = Color(0xFF4C545C);
   static const primaryColor = Colors.blue;

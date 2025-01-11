@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:innove_final_project/core/theme/color/app_colors.dart';
+import 'package:innove_final_project/core/theme/text_styles/text_style_helper.dart';
 import 'package:innove_final_project/features/onboarding/theme_notifier.dart';
 import 'package:provider/provider.dart';
 
@@ -20,27 +22,19 @@ class CustomContainer extends StatelessWidget {
             children: [
               Text(
                 "Recent Books",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: themeNotifier.textColor,
-                ),
+               style: TextStyleHelper.font24W700Primary(themeNotifier),
               ),
               Row(
                 children: [
                   Text(
                     "See All",
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: themeNotifier.textColor,
-                      decoration: TextDecoration.underline,
-                      decorationColor:themeNotifier.textColor,
-                    ),
+                    style: TextStyleHelper.font16W500underline(themeNotifier),
                   ),
-                  const SizedBox(width: 4,),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    size: 20,
+                  const SizedBox(width:4),
+                  SvgPicture.asset(
+                    'assets/icons/arrow_forward.svg',
+                    width: 20,
+                    height: 20,
                     color: themeNotifier.textColor,
                   ),
                 ],
@@ -53,7 +47,6 @@ class CustomContainer extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(16),
           child: Container(
-
             height: 182,
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
@@ -81,11 +74,11 @@ class CustomRowWithArrow extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        ArrowItem(imagePath: 'assets/images/book1.png', label: 'dogs and wolfs', percentage: 90),
+        ArrowItem(imagePath: 'assets/images/book11.png', label: 'Native Invisibility', percentage: 90),
         SizedBox(height: 16),
-        ArrowItem(imagePath: 'assets/images/book2.png', label: 'light fall', percentage: 50),
+        ArrowItem(imagePath: 'assets/images/book7.png', label: 'Cold Lake', percentage: 50),
         SizedBox(height: 16),
-        ArrowItem(imagePath: 'assets/images/book3.png', label: 'dogs and wolfs', percentage: 20),
+        ArrowItem(imagePath: 'assets/images/book22.png', label: 'Lightfall', percentage: 20),
       ],
     );
   }
@@ -101,7 +94,7 @@ class ArrowItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween, // Aligning content to ends
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(
           children: [
@@ -110,17 +103,15 @@ class ArrowItem extends StatelessWidget {
               width: 24,
               height: 34,
             ),
-            const SizedBox(width: 3.5),
+            const SizedBox(width: 8),
             Text(
               label,
-              style: TextStyle(
-                color: themeNotifier.textColor,
-                fontSize: 12,
-              ),
+              style: TextStyleHelper.font16W500Primary(themeNotifier),
             ),
-            Icon(
-              Icons.arrow_forward_ios,
-              size: 20,
+            SvgPicture.asset(
+              'assets/icons/arrow_forward.svg',
+              width: 20,
+              height: 20,
               color: themeNotifier.textColor,
             ),
           ],
@@ -129,10 +120,7 @@ class ArrowItem extends StatelessWidget {
           children: [
             Text(
               '${percentage.toStringAsFixed(0)}%',
-              style: const TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
-              ),
+               style: TextStyleHelper.font14W400Primary(themeNotifier),
             ),
             const SizedBox(width: 8),
             Container(

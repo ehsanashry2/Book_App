@@ -12,7 +12,7 @@ class AppBarSection extends StatelessWidget {
     return Consumer<ThemeNotifier>(
       builder: (context, themeNotifier, child) {
         return Padding(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Container(
             color: themeNotifier.isDark ? AppColors.darkBackground : AppColors.lightBackground,
             height: 70,
@@ -57,4 +57,3 @@ class AppBarSection extends StatelessWidget {
   }
 }
 
-//notification.svg

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:innove_final_project/core/theme/color/app_colors.dart';
+import 'package:innove_final_project/core/theme/text_styles/text_style_helper.dart';
 import 'package:innove_final_project/features/onboarding/theme_notifier.dart';
 import 'package:provider/provider.dart';
 
@@ -26,36 +27,32 @@ class _CategoriesState extends State<Categories> {
             padding: const EdgeInsets.only(left:16),
             child: Text(
               "Categories",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 17,
-                color: themeNotifier.textColor,
-              ),
+              style: TextStyleHelper.font24W700Primary(themeNotifier),
             ),
           ),
           const SizedBox(height: 16),
           buildCategoryRow([
-            'motivations & inspiration',
-            'drama',
-            'science',
+            'Motivations & Inspiration',
+            'Drama',
+            'Science',
           ]),
           const SizedBox(height: 10),
           buildCategoryRow([
-            'education',
-            'novels',
-            'horror',
-            'trending',
+            'Education',
+            'Novels',
+            'Horror',
+            'Trending',
           ]),
           const SizedBox(height: 10),
           buildCategoryRow([
-            'money & investment',
-            'health & nutritions',
+            'Money & Investment',
+            'Health & Nutritions',
           ]),
           const SizedBox(height: 10),
           buildCategoryRow([
-            'history',
-            'fantacy',
-            'romance',
+            'History',
+            'Fantacy',
+            'Romance',
             'Scientific Literature',
           ]),
         ],
@@ -95,7 +92,6 @@ class CategoryCard extends StatelessWidget {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
     bool isDark = themeNotifier.isDark;
     Color backgroundColor = isDark ? AppColors.containercolor : AppColors.lightBackground;
-    Color textColor = isDark ? AppColors.textDark: AppColors.textLight;
     Color borderColor = isDark ?AppColors.containercolor  : AppColors.darkBackground;
 
     return Container(
@@ -109,9 +105,7 @@ class CategoryCard extends StatelessWidget {
       ),
       child: Text(
         label,
-        style: TextStyle(
-          color: textColor,
-        ),
+        style:TextStyleHelper.font16W500Primary(themeNotifier),
       ),
     );
   }

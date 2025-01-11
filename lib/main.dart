@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Your App Name',
+      title: 'Book App',
       themeMode: themeNotifier.themeMode,
       theme: lightTheme,
       darkTheme: darkTheme,
@@ -39,6 +39,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-//  initialRoute: Routes.splash,
-//       onGenerateRoute: AppRouter.generateRoute,

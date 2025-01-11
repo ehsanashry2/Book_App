@@ -1,71 +1,74 @@
 import 'package:flutter/material.dart';
 import 'package:innove_final_project/features/mostpopular/model/book_model.dart';
-import 'package:innove_final_project/features/mostpopular/view/screen/most_popular.dart';
+import 'package:innove_final_project/features/mostpopular/view/screen/book_card_view.dart';
 
 class BookList extends StatelessWidget {
   const BookList({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<ContainerModel> containerModels = [
-      ContainerModel(
+    final List<BookModel> bookModels = [
+      BookModel(
         imagePath: 'assets/images/book4.png',
-        firstText: '#novel',
-        secondText: 'dogs and wolfs',
-        thirdText: 'jerel dye',
+        title: 'Dogs And Wolves',
+        author: 'Price Ainsworth',
         price: 10,
+        category: '#Novel',
+        description: 'A captivating story of two best friends, a dog and a wolf, facing harsh challenges.',
       ),
-      ContainerModel(
+      BookModel(
         imagePath: 'assets/images/book5.png',
-        firstText: '#novel',
-        secondText: 'dogs and wolfs',
-        thirdText: 'carole maurel',
+        title: 'Lightfall',
+        author: 'Ingrid Chabbert',
         price: 10,
+        category: '#Graphic Novel',
+        description: 'A graphic novel with breathtaking art, showcasing an emotional journey of self-discovery.',
       ),
-      ContainerModel(
+      BookModel(
         imagePath: 'assets/images/book6.png',
-        firstText: '#novel',
-        secondText: 'carole maurel',
-        thirdText: 'dogs and wolfs',
+        title: 'Lightfall',
+        author: 'Ingrid Chabbert',
         price: 10,
+        category: '#Graphic Novel',
+        description: 'A gripping tale about light, darkness, and the choices we make.',
       ),
-      ContainerModel(
+      BookModel(
         imagePath: 'assets/images/book1.png',
-        firstText: '#novel',
-        secondText: 'dogs and wolfs',
-        thirdText: 'Price ainsworth',
+        title: 'Lightfall',
+        author: 'Ingrid Chabbert',
         price: 10,
+        category: '#Novel',
+        description: 'This novel explores the complex nature of human emotions in modern relationships.',
       ),
-      ContainerModel(
+      BookModel(
         imagePath: 'assets/images/book2.png',
-        firstText: '#novel',
-        secondText: 'lightfall',
-        thirdText: 'ingrid chabbert',
+        title: 'Lightfall',
+        author: 'Ingrid Chabbert',
         price: 10,
+        category: '#Fantasy',
+        description: 'An adventure in a fantastical world where magic is real and everyone has a secret.',
       ),
-      ContainerModel(
+      BookModel(
         imagePath: 'assets/images/book3.png',
-        firstText: '#novel',
-        secondText: 'dogs and wolfs',
-        thirdText: 'jerel dye',
+        title: 'Dogs And Wolves',
+        author: 'Price Ainsworth',
         price: 10,
+        category: '#Novel',
+        description: 'A touching narrative about loyalty, friendship, and survival in the wild.',
       ),
     ];
 
-    return Padding(
-      padding: const EdgeInsets.only(left: 16.0), // Add left padding
-      child: Container(
-        height: 300,
-        child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: containerModels.length,
-          itemBuilder: (context, index) => Padding(
-            padding: const EdgeInsets.only(right: 8.0),  // Space between items
-            child: ContainerView(models: [containerModels[index]]),
-          ),
-        ),
+    return SizedBox(
+      height:  235,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        itemCount: bookModels.length,
+        separatorBuilder: (context, index) => const SizedBox(width: 16),
+        itemBuilder: (context, index) {
+          return BookCardView(book: bookModels[index]);
+        },
       ),
     );
   }
 }
-

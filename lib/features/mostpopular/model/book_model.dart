@@ -1,14 +1,17 @@
-class ContainerModel {
+class BookModel {
   String imagePath;
-  String firstText;
-  String secondText;
-  String thirdText;
+  String title;
+  String author;
+  String category;
   int price;
-  ContainerModel({
+  String description;
+
+  BookModel({
     required this.imagePath,
-    required this.firstText,
-    required this.secondText,
-    required this.thirdText,
+    required this.title,
+    required this.author,
+    required this.category,
     required this.price,
+    required this.description,
   });
 }

@@ -13,7 +13,7 @@ class _BestSellerState extends State<BestSeller> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 24, bottom: 16,),
+      padding: const EdgeInsets.only(top: 8, bottom: 16,),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Padding(
@@ -21,51 +21,51 @@ class _BestSellerState extends State<BestSeller> {
           child: Row(
             children: [
               FilterButton(
-                label: '#best seller',
-                isActive: selectedFilter == '#best seller',
+                label: '#Best Seller',
+                isActive: selectedFilter == '#Best Seller',
                 onTap: () {
                   setState(() {
-                    selectedFilter = '#best seller';
+                    selectedFilter = '#Best Seller';
                   });
                 },
               ),
               const SizedBox(width: 6),
               FilterButton(
-                label: '#latest',
-                isActive: selectedFilter == '#latest',
+                label: '#Latest',
+                isActive: selectedFilter == '#Latest',
                 onTap: () {
                   setState(() {
-                    selectedFilter = '#latest';
+                    selectedFilter = '#Latest';
                   });
                 },
               ),
               const SizedBox(width: 6),
               FilterButton(
-                label: '#coming soon',
-                isActive: selectedFilter == '#coming soon',
+                label: '#Coming Soon',
+                isActive: selectedFilter == '#Coming Soon',
                 onTap: () {
                   setState(() {
-                    selectedFilter = '#coming soon';
+                    selectedFilter = '#Coming Soon';
                   });
                 },
               ),
               const SizedBox(width: 6),
               FilterButton(
-                label: '#trending',
-                isActive: selectedFilter == '#trending',
+                label: '#Trending',
+                isActive: selectedFilter == '#Trending',
                 onTap: () {
                   setState(() {
-                    selectedFilter = '#trending';
+                    selectedFilter = '#Trending';
                   });
                 },
               ),
               const SizedBox(width: 6),
               FilterButton(
-                label: '#popular',
-                isActive: selectedFilter == '#popular',
+                label: '#Popular',
+                isActive: selectedFilter == '#Popular',
                 onTap: () {
                   setState(() {
-                    selectedFilter = '#popular';
+                    selectedFilter = '#Popular';
                   });
                 },
               ),

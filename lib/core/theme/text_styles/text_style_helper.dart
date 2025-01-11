@@ -16,7 +16,7 @@ class TextStyleHelper {
       color: themeNotifier.textColor2,
       fontSize: 12,
       fontWeight: FontWeight.w400,
-      fontFamily: 'Neue Montreal',
+      fontFamily: 'NeueMontreal',
       fontStyle: FontStyle.italic,
     );
   }
@@ -25,7 +25,7 @@ class TextStyleHelper {
       color: themeNotifier.textColor2,
       fontSize: 12,
       fontWeight: FontWeight.w500,
-      fontFamily: 'Neue Montreal',
+      fontFamily: 'NeueMontreal',
       fontStyle: FontStyle.italic,
     );
   }
@@ -36,16 +36,16 @@ class TextStyleHelper {
           : AppColors.darkBackground,
       fontSize: 12,
       fontWeight: FontWeight.w400,
-      fontFamily: 'Neue Montreal',
+      fontFamily: 'NeueMontreal',
       fontStyle: FontStyle.normal,
     );
   }
   static TextStyle font12W400Scondar(ThemeNotifier themeNotifier) {
     return TextStyle(
-      color: themeNotifier.textColor,
+      color: themeNotifier.textColor2,
       fontSize: 12,
       fontWeight: FontWeight.w400,
-      fontFamily: 'Neue Montreal',
+      fontFamily: 'NeueMontreal',
       fontStyle: FontStyle.normal,
     );
   }
@@ -54,10 +54,22 @@ class TextStyleHelper {
       color: themeNotifier.textColor,
       fontSize: 12,
       fontWeight: FontWeight.w700,
-      fontFamily: 'Neue Montreal',
+      fontFamily: 'NeueMontreal',
       fontStyle: FontStyle.normal,
     );
   }
+  static TextStyle font12W700grey(ThemeNotifier themeNotifier) {
+    return TextStyle(
+      color: themeNotifier.isDark
+          ? AppColors.lightBackground
+          : AppColors.grey,
+      fontSize: 12,
+      fontWeight: FontWeight.w700,
+      fontFamily: 'NeueMontreal',
+      fontStyle: FontStyle.normal,
+    );
+  }
+
 
   //_______________________________14________________________________//
   static TextStyle font14W400Primary(ThemeNotifier themeNotifier) {
@@ -65,7 +77,7 @@ class TextStyleHelper {
       color: themeNotifier.textColor,
       fontSize: 14,
       fontWeight: FontWeight.w400,
-      fontFamily: 'Neue Montreal',
+      fontFamily: 'NeueMontreal',
       fontStyle: FontStyle.normal,
     );
   }
@@ -74,10 +86,29 @@ class TextStyleHelper {
       color: themeNotifier.borderColor,
       fontSize: 14,
       fontWeight: FontWeight.w400,
-      fontFamily: 'Neue Montreal',
+      fontFamily: 'NeueMontreal',
       fontStyle: FontStyle.normal,
     );
   }
+  static TextStyle font14W400Italic(ThemeNotifier themeNotifier) {
+    return TextStyle(
+      color: themeNotifier.textColor2,
+      fontSize: 14,
+      fontWeight: FontWeight.w400,
+      fontFamily: 'NeueMontreal',
+      fontStyle: FontStyle.italic,
+    );
+  }
+  static TextStyle font14W400primary(ThemeNotifier themeNotifier) {
+    return TextStyle(
+      color: themeNotifier.textColor2,
+      fontSize: 14,
+      fontWeight: FontWeight.w400,
+      fontFamily: 'NeueMontreal',
+      fontStyle: FontStyle.normal,
+    );
+  }
+
 
 
   //_______________________________16________________________________//
@@ -87,27 +118,61 @@ class TextStyleHelper {
           ? AppColors.lightBackground
           : AppColors.darkBackground,
       fontSize: 16,
-      fontFamily: 'Neue Montreal',
+      fontFamily: 'NeueMontreal',
       fontWeight: FontWeight.w400,
       fontStyle: FontStyle.normal,
     );
   }
 
-  static TextStyle font16W500Primary(ThemeNotifier themeNotifier) {
+  static TextStyle font16W400text(ThemeNotifier themeNotifier) {
     return TextStyle(
       color: themeNotifier.textColor,
       fontSize: 16,
+      fontFamily: 'NeueMontreal',
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+    );
+  }
+  static TextStyle font16W500Primary(ThemeNotifier themeNotifier) {
+    return TextStyle(
+      color: themeNotifier.isDark
+          ? AppColors.lightBackground
+          : AppColors.darkBackground,
+      fontSize: 16,
       fontWeight: FontWeight.w500,
-      fontFamily: 'Neue Montreal',
+      fontFamily: 'NeueMontreal',
+      fontStyle: FontStyle.normal,
+    );
+  }
+  static TextStyle font16W500Text(ThemeNotifier themeNotifier) {
+    return TextStyle(
+      color: themeNotifier.isDark
+          ? AppColors.darkBackground
+          : AppColors.lightBackground,
+      fontSize: 16,
+      fontWeight: FontWeight.w500,
+      fontFamily: 'NeueMontreal',
+      fontStyle: FontStyle.normal,
+    );
+  }
+  static TextStyle font16W700Primary(ThemeNotifier themeNotifier) {
+    return TextStyle(
+      color: themeNotifier.textColor,
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'NeueMontreal',
       fontStyle: FontStyle.normal,
     );
   }
 
-  static TextStyle font16W500(ThemeNotifier themeNotifier) {
+
+  static TextStyle font16W500underline(ThemeNotifier themeNotifier) {
     return TextStyle(
+      decoration: TextDecoration.underline,
       color: themeNotifier.textColor,
       fontSize: 16,
       fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
     );
   }
   //_______________________________20________________________________//
@@ -116,7 +181,7 @@ class TextStyleHelper {
       color: themeNotifier.textColor,
       fontSize: 20,
       fontWeight: FontWeight.w500,
-      fontFamily: 'Neue Montreal',
+      fontFamily: 'NeueMontreal',
       fontStyle: FontStyle.normal,
     );
   }
@@ -127,7 +192,6 @@ class TextStyleHelper {
       color: themeNotifier.textColor,
       fontSize: 24,
       fontWeight: FontWeight.bold,
-      fontFamily: 'Neue Montreal',
       fontStyle: FontStyle.normal,
     );
   }

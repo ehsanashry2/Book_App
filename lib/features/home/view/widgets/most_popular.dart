@@ -16,7 +16,7 @@ class _ButtonSectionState extends State<ButtonSection> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only( left:24,top:24,bottom: 16),
+      padding: const EdgeInsets.only( left:16,top:24,bottom: 16),
       child: Row(
         children: [
           FilterButton(
@@ -85,6 +85,8 @@ class FilterButton extends StatelessWidget {
         child: Text(
           label,
           style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 16,
             color: textColor,
           ),
         ),

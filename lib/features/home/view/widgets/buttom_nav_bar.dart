@@ -10,9 +10,9 @@ class FavoritePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Favorite Page")),
-      body: const Center(child: Text("Welcome to the Favorite Page")),
+    return const Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Center(child: Text("Welcome to the Favorite Page")),
     );
   }
 }
@@ -22,9 +22,9 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Profile Page")),
-      body: const Center(child: Text("Welcome to the Profile Page")),
+    return const Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Center(child: Text("Welcome to the Profile Page")),
     );
   }
 }
@@ -34,9 +34,9 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Settings Page")),
-      body: const Center(child: Text("Welcome to the Settings Page")),
+    return const Scaffold(
+       backgroundColor: Colors.transparent,
+      body: Center(child: Text("Welcome to the Settings Page")),
     );
   }
 }
@@ -52,7 +52,7 @@ class _BottomNavBarSectionState extends State<BottomNavBarSection> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    HomePage(),
+    const HomePage(),
     const FavoritePage(),
     const ProfilePage(),
     const SettingsPage(),

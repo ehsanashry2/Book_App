@@ -102,7 +102,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-     - family: NeueMonteral
+     - family: NeueMontreal
        fonts:
           - asset: assets/fonts/NeueMontreal-Regular.otf
           - asset: assets/fonts/NeueMontreal-Italic.otf

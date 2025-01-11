@@ -5,7 +5,7 @@ import 'package:innove_final_project/core/route/routes.dart';
 import 'package:innove_final_project/features/home/view/widgets/buttom_nav_bar.dart';
 import 'package:innove_final_project/features/onboarding/onboarding_screen.dart';
 import 'package:innove_final_project/features/home/view/screens/home_screen.dart';
-import 'package:innove_final_project/features/home/view/screens/book_details_screen.dart';
+
 
 
 class AppRouter {
@@ -26,8 +26,6 @@ class AppRouter {
         return  HomePage();
       case Routes.buttom_nav:
         return  BottomNavBarSection();
-      case Routes.bookDetails:
-        return const BookDetailsScreen();
       default:
         return const Center(child: Text("Page Not Found"));
     }

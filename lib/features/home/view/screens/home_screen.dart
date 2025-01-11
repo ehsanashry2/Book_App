@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:innove_final_project/features/auther/view/screen/authoe_screen.dart';
+import 'package:innove_final_project/features/author/view/screen/author_screen.dart';
 import 'package:innove_final_project/features/bestseller/screen/book_list.dart';
 import 'package:innove_final_project/features/home/view/widgets/best_seller.dart';
 import 'package:innove_final_project/features/home/view/widgets/categories.dart';
@@ -18,28 +18,25 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<ThemeNotifier>(
       builder: (context, themeNotifier, child) {
-        return SafeArea(
-          child: Scaffold(
-            backgroundColor: themeNotifier.backgroundColor,
-            body: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const AppBarSection(),
-                  const SizedBox(height: 19),
-                  const SearchTextField(),
-                  const ButtonSection(),
-                  const BookListSection(),
-                  const SizedBox(height: 24,),
-                  const CustomContainer(),
-                  const BestSeller(),
-                  const BookList(),
-                  const Categories(),
-                  // RecentBookSection(),
-                 // CategorySection(),
-                  ExploreAuthorsSection(),
-                ],
-              ),
+        return Scaffold(
+          backgroundColor: themeNotifier.backgroundColor,
+          body: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 55),
+                const AppBarSection(),
+                const SizedBox(height: 16),
+                const SearchTextField(),
+                const ButtonSection(),
+                const BookListSection(),
+                const SizedBox(height: 24,),
+                const CustomContainer(),
+                const BestSeller(),
+                const BookList(),
+                const Categories(),
+                ExploreAuthorsSection(),
+              ],
             ),
           ),
         );
